@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <AssemblyName>BenjaminAbt.TwitchChatBot.WebApp</AssemblyName>
+    <RootNamespace>BenjaminAbt.TwitchChatBot.WebApp</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="TwitchLib" Version="3.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Twitch.MediatR.AspNetCore\Twitch.MediatR.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\Twitch.MediatR\Twitch.MediatR.csproj" />
+  </ItemGroup>
+
+</Project>

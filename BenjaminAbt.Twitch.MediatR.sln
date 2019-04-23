@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{26D8C506-FF87-4815-B6BD-226491AA1236}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5522296C-2F04-4A39-AEE6-337A1B88009A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{199829A6-FA3C-4543-9748-F29BEA5F4F02}"
+	ProjectSection(SolutionItems) = preProject
+		build\azure-pipelines-steps.dotnet-nuget.yml = build\azure-pipelines-steps.dotnet-nuget.yml
+		azure-pipelines.yml = azure-pipelines.yml
+		NuGet.config = NuGet.config
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitch.MediatR.AspNetCore", "src\Twitch.MediatR.AspNetCore\Twitch.MediatR.AspNetCore.csproj", "{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitch.MediatR", "src\Twitch.MediatR\Twitch.MediatR.csproj", "{00469418-DA2B-49DC-849C-78B99721354F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2277D3D1-98B9-485B-A9FF-0BFA2B7B49EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitch.MediatR.UnitTests", "tests\Twitch.MediatR.UnitTests\Twitch.MediatR.UnitTests.csproj", "{DDE286E7-F024-4CAF-A9AE-F5689004632C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitchChatBot.ConsoleApp", "samples\TwitchChatBot.ConsoleApp\TwitchChatBot.ConsoleApp.csproj", "{E3AF703A-B119-425F-AF7D-3425712C9BFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitchChatBot.WebApp", "samples\TwitchChatBot.WebApp\TwitchChatBot.WebApp.csproj", "{62ECFE86-DFCE-47BE-A57D-838EB75B1253}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitch.MediatR.AspNetCore.UnitTests", "tests\Twitch.MediatR.AspNetCore.UnitTests\Twitch.MediatR.AspNetCore.UnitTests.csproj", "{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00469418-DA2B-49DC-849C-78B99721354F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00469418-DA2B-49DC-849C-78B99721354F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00469418-DA2B-49DC-849C-78B99721354F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00469418-DA2B-49DC-849C-78B99721354F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE286E7-F024-4CAF-A9AE-F5689004632C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE286E7-F024-4CAF-A9AE-F5689004632C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE286E7-F024-4CAF-A9AE-F5689004632C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE286E7-F024-4CAF-A9AE-F5689004632C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AF703A-B119-425F-AF7D-3425712C9BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AF703A-B119-425F-AF7D-3425712C9BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AF703A-B119-425F-AF7D-3425712C9BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AF703A-B119-425F-AF7D-3425712C9BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62ECFE86-DFCE-47BE-A57D-838EB75B1253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62ECFE86-DFCE-47BE-A57D-838EB75B1253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62ECFE86-DFCE-47BE-A57D-838EB75B1253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62ECFE86-DFCE-47BE-A57D-838EB75B1253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A0C66F2-0AB4-47DB-BFD9-B736E06B95F4} = {26D8C506-FF87-4815-B6BD-226491AA1236}
+		{00469418-DA2B-49DC-849C-78B99721354F} = {26D8C506-FF87-4815-B6BD-226491AA1236}
+		{DDE286E7-F024-4CAF-A9AE-F5689004632C} = {2277D3D1-98B9-485B-A9FF-0BFA2B7B49EE}
+		{E3AF703A-B119-425F-AF7D-3425712C9BFF} = {5522296C-2F04-4A39-AEE6-337A1B88009A}
+		{62ECFE86-DFCE-47BE-A57D-838EB75B1253} = {5522296C-2F04-4A39-AEE6-337A1B88009A}
+		{078B083F-DAF8-4DB4-A4A9-0ADF3C05E222} = {2277D3D1-98B9-485B-A9FF-0BFA2B7B49EE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87B68978-9160-4A9F-A547-F8CC32887569}
+	EndGlobalSection
+EndGlobal

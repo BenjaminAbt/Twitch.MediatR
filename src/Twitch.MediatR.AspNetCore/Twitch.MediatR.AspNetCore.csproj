@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <AssemblyName>BenjaminAbt.Twitch.MediatR.AspNetCore</AssemblyName>
+    <RootNamespace>BenjaminAbt.Twitch.MediatR.AspNetCore</RootNamespace>
+    <PackageId>Twitch.MediatR.AspNetCore</PackageId>
+    <Authors>Benjamin Abt</Authors>
+    <Copyright>Copyright 2019 (c) All rights reserved.</Copyright>
+    <PackageTags>Twitch, MediatR, CQRS, AspNetCore</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Twitch.MediatR\Twitch.MediatR.csproj" />
+  </ItemGroup>
+
+</Project>

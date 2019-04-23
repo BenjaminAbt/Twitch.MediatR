@@ -1,0 +1,23 @@
+resources:
+- repo: self
+
+trigger:
+  branches:
+    include:
+    - master
+
+jobs:
+- job: NuGet
+  pool:
+    vmImage: windows-2019 # see all here https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops
+  steps:
+  - template: build/azure-pipelines-steps.dotnet-nuget.yml
+    parameters:
+      toolPath: $(Build.BinariesDirectory)
+      dotnetInstallConfigFile: 'NuGet.config' # workaround for a bug in dotnet cli https://github.com/dotnet/cli/issues/9586#issuecomment-484585146
+      gitVersionVersion: '5.0.0-beta2-18' # release latest version here https://www.nuget.org/packages/GitVersion.CommandLine.DotNetCore
+      nugetVersion: '4.9.4' # see recommended version here https://www.nuget.org/downloads
+      buildConfiguration: 'Release'
+      packagesToPack: src\**\*.csproj
+      packTo: $(build.ArtifactStagingDirectory)
+      # Publishes all created NuGet packages to your artifacts

@@ -1,0 +1,15 @@
+mode: mainline
+tag-prefix: '[vV]'
+next-version: 0.2.0
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+legacy-semver-padding: 3
+build-metadata-padding: 3
+commits-since-version-source-padding: 3
+commit-message-incrementing: Enabled
+branches:
+  pull-request:
+      tag: pr
+ignore:
+  sha: []

@@ -1,0 +1,67 @@
+# Steps of building .NET Core / .NET Standard as NuGet output and raw output
+parameters:
+  toolPath: ''
+  dotnetInstallConfigFile: ''
+  gitVersionVersion: ''
+  nugetVersion: ''
+  buildConfiguration: ''
+  packagesToPack: ''
+  packTo: $(build.ArtifactStagingDirectory)
+
+steps:
+## Build Versioning
+
+- task: NuGetToolInstaller@0
+  displayName: NuGet use ${{ parameters.nugetVersion }}
+  inputs:
+    versionSpec: ${{ parameters.nugetVersion }}
+
+- script: dotnet tool install GitVersion.Tool --version ${{ parameters.gitVersionVersion }} --tool-path ${{ parameters.toolPath }}/gitversion --configfile ${{ parameters.dotnetInstallConfigFile }}
+  displayName: GitVersion - Install
+
+- script: ${{ parameters.toolPath}}/gitversion/dotnet-gitversion $(Build.SourcesDirectory) /output buildserver /nofetch
+  displayName: GitVersion - Execute
+
+- powershell:   |
+    $CI_Version = "$env:GITVERSION_LEGACYSEMVER"
+    Write-Host ("##vso[task.setvariable variable=CI_Version;]$CI_Version")
+    Write-Host "Build ID: $(Build.BuildId)"
+    Write-Host "Build BuildNumber: $(Build.BuildNumber)"
+  displayName: "GitVersion - Info"
+
+## Build Versioning
+
+- task: NuGetCommand@2
+  displayName: "NuGet Restore"
+  inputs:
+    restoreSolution: '**/*.csproj'
+    feedsToUse: config
+    nugetConfigPath: NuGet.config
+
+- task: DotNetCoreCLI@2
+  displayName: ".NET build"
+  inputs:
+    projects: '**/*.csproj'
+    arguments: --configuration ${{ parameters.buildConfiguration }} --no-restore
+
+- task: DotNetCoreCLI@2
+  displayName: ".NET test"
+  inputs:
+    command: test
+    projects: 'tests/**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: ".NET pack"
+  inputs:
+    command: pack
+    packagesToPack: ${{ parameters.packagesToPack }}
+    versioningScheme: byEnvVar
+    versionEnvVar: CI_Version
+    arguments: --no-build
+    packDirectory: ${{ parameters.packTo }}
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish artifacts"
+  inputs:
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: drop

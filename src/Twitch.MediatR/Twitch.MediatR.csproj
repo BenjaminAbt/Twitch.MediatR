@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>BenjaminAbt.Twitch.MediatR</AssemblyName>
+    <RootNamespace>BenjaminAbt.Twitch.MediatR</RootNamespace>
+    <PackageId>Twitch.MediatR</PackageId>
+    <Authors>Benjamin Abt</Authors>
+    <Copyright>Copyright 2019 (c) All rights reserved.</Copyright>
+    <PackageTags>Twitch, MediatR, CQRS</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="TwitchLib" Version="3.0.1" />
+  </ItemGroup>
+
+</Project>
