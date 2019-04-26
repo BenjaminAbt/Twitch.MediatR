@@ -10,6 +10,10 @@ Twitch.MediatR
 This repository shows how to react to Twitch events with the help of [MediatR](https://github.com/jbogard/MediatR) (CQRS).
 The events correspond to the library [TwitchLib](https://github.com/TwitchLib/TwitchLib). You can work with the same events as before, if you used the TwitchLib library.
 
+## Blog Post
+
+[Twitch.MediatR with ASP.NET Core - schwabencode.com](https://schwabencode.com/blog/2019/04/26/Twitch-MediatR-AspNetCore)
+
 ## How it works
 
 `Twitch.MediatR` listens to `TwitchLib` events, catches the event arguments and publishes these arguments via MediatR as notification.
