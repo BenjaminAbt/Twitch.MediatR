@@ -10,6 +10,12 @@
     <Copyright>Copyright 2019 (c) All rights reserved.</Copyright>
     <PackageTags>Twitch, MediatR, CQRS, AspNetCore</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/BenjaminAbt/Twitch.MediatR</RepositoryUrl>
+    <Description>Twitch.MediatR.AspNetcore is a wrapper for TwitchLib to make Twitch events available as MediatR notifications in ASP.NET Core.</Description>
+    <PackageTags>mediator;mediatr;twitch;twitchlib;twitch notifications;aspnetcore twitch</PackageTags>
+    <PackageProjectUrl>https://github.com/BenjaminAbt/Twitch.MediatR</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/BenjaminAbt/Twitch.MediatR/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
