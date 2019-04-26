@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.1</LangVersion>
     <AssemblyName>BenjaminAbt.Twitch.MediatR</AssemblyName>
     <RootNamespace>BenjaminAbt.Twitch.MediatR</RootNamespace>
     <PackageId>Twitch.MediatR</PackageId>
