@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.1</LangVersion>
     <AssemblyName>BenjaminAbt.Twitch.MediatR</AssemblyName>
     <RootNamespace>BenjaminAbt.Twitch.MediatR</RootNamespace>
     <PackageId>Twitch.MediatR</PackageId>
@@ -10,6 +10,12 @@
     <Copyright>Copyright 2019 (c) All rights reserved.</Copyright>
     <PackageTags>Twitch, MediatR, CQRS</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/BenjaminAbt/Twitch.MediatR</RepositoryUrl>
+    <Description>Twitch.MediatR is a wrapper for TwitchLib to make Twitch events available as MediatR notifications.</Description>
+    <PackageTags>mediator;mediatr;twitch;twitchlib;twitch notifications</PackageTags>
+    <PackageProjectUrl>https://github.com/BenjaminAbt/Twitch.MediatR</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/BenjaminAbt/Twitch.MediatR/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>

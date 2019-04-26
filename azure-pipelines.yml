@@ -1,8 +1,13 @@
-resources:
-- repo: self
-
 trigger:
-- master
+  branches:
+    include:
+    - master
+
+pr:
+  branches:
+    include:
+    - master
+    - feature/*
 
 jobs:
 - job: NuGet
