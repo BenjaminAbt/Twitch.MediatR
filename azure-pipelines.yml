@@ -2,9 +2,7 @@ resources:
 - repo: self
 
 trigger:
-  branches:
-    include:
-    - master
+- master
 
 jobs:
 - job: NuGet
